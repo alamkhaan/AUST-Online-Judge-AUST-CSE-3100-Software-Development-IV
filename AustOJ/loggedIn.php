@@ -1,6 +1,6 @@
 <?php
 	
-
+	
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,10 +25,10 @@
 					</div>
 					
 					<div class = "login" > 
-						<a  href="https://codeforces.com">LoggedIn</a>
+						<a  href="https://codeforces.com"> <?php echo $_SESSION['username'] ?> </a>
 					</div>
 					<div class =  "regi">
-						<a  href="https://codeforces.com" >Registration</a>
+						<a  href="login.php" >Log Out</a>
 					</div>
 				</div>
 			</div>

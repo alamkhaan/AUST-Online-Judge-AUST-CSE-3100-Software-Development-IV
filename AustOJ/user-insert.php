@@ -34,7 +34,7 @@
  		exit();
 	}
 
-	
+
 
 	$servername = "localhost";
 	$username = "root";
@@ -48,16 +48,44 @@
 	  die("Connection failed: " . $conn->connect_error);
 	}
 
+	$sql = "SELECT * FROM user";
+    $result= $conn->query($sql);
+
+
+         
+        while($row = $result-> fetch_assoc())
+            {
+
+               if($row["email"]==$email)
+               {
+                  
+                 	header("location:register.php?error=duplicate-email");
+                  	exit();
+               }
+               else if($row["username"]==$name)
+               {
+                  
+                 	header("location:register.php?error=duplicate-username");
+                  	exit();
+               }
+               else if($row["contactno"]==$phone)
+               {
+                  
+                 	header("location:register.php?error=duplicate-contact");
+                  	exit();
+               }
+         	}
+
 	$sql = "INSERT INTO user (username,email,password,gender,contactno,birthdate)
-	VALUES ('$username','$email','$password1','$gender','$phone','$birthdate')";
+	VALUES ('$name','$email','$password1','$gender','$phone','$birthdate')";
 
 	if ($conn->query($sql) === TRUE) 
 	{
-	  echo "New record Uploaded successfully";
+	  header("location:login.php?successful");
 	} 
 	else 
 	{
-	  echo "Error: " . $sql . "<br>" . $conn->error;
+	  $conn->error;
 	}
 
 	$conn->close();

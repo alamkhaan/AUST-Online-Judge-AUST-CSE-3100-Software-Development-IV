@@ -61,7 +61,12 @@
                         $Msg = " Conatact No. should be in digits ";
                     else if($val=="phone3")
                         $Msg = " Conatact No. is invalid ";
-
+                    else if($val=="duplicate-email")
+                        $Msg = " Email is already used in another account ";
+                    else if($val=="duplicate-username")
+                        $Msg = " Username already exist ";
+                    else if($val=="duplicate-contact")
+                        $Msg = " Contact No is already used in another account ";
 
                     echo '<div class="alert alert-danger">'.$Msg.'</div>';
                 }

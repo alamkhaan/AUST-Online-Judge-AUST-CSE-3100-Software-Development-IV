@@ -1,5 +1,6 @@
 <?php 
-	
+	session_start();
+	unset($_SESSION["username"]);
 	include 'notloggedin.php';
 ?>
 
@@ -62,7 +63,7 @@
                             }
                             else if(isset($_GET['successful']))
                             {
-                                $Msg = " Login Successful ";
+                                $Msg = " Registration Successful ";
                                 echo '<div class="alert alert-success">'.$Msg.'</div>';
                             }
 

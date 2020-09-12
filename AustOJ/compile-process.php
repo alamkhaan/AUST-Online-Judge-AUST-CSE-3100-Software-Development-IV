@@ -9,7 +9,7 @@ function kill($pid)
 
 function removeFiles() 
 {
-  exit();
+
   global $cwd;
   if (file_exists($cwd.'/error-output.txt')) 
   {
@@ -195,7 +195,7 @@ if(isset($_POST['btn-send']))
   {
     $_SESSION['outputvalue']  = "Something Wrong in Compiler ";
     header('location:compiler.php?output');
-    removeFiles();
+    //removeFiles();
     exit;
   }
 }

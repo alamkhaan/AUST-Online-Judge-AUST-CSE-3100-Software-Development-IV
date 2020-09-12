@@ -5,8 +5,10 @@
         $_SESSION['outputvalue'] = "";
         $_SESSION['inputvalue'] = "";
         $_SESSION['codevalue'] = "";
-        $_SESSION['limitvalue']  ="";
     }
+    if(isset($_SESSION['username']))
+        include 'loggedin.php';
+    else
     include 'notloggedin.php';
  ?>
 
@@ -16,15 +18,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
     
-    <title>Contact Us Form</title>
+    <title>AUST OJ</title>
+    
+    
 </head>
 <body>
    
-    
+    <div class="Row">
         <div class="container">
                 <div class="row">   
                     
@@ -53,55 +56,50 @@
                     
                 </div>
             </div>
+        <div class = "row space"></div>
         <div class="container">
-                 
+        
             <div class="row">
-                <div class  ="log">
-                </div>
-                <div class="col-lg-5 m-auto">
-                    <div class="card mt-5" >
-                        <div class="card-title">
-                            <h2 class="text-center py-2"> Compile Your Own Code </h2>
-                            <hr>
-                            <?php 
-                                $Msg = "";
-                                if(isset($_GET['error']))
-                                {
-                                    $Msg = " Please Fill in the Blanks ";
-                                    echo '<div class="alert alert-danger">'.$Msg.'</div>';
-                                }
+                <div class = "col-3"></div>
+                        <div class = "col-6">
+                        <h3> <b>Compile Your Own Code </b></h3>
+                    </div>
+
+                            
+                            
+            </div>
                         
-                            ?>
-                        </div>
-                        <div class="card-body">
                             <form method="post" action="process.php">
-                                <b>Enter Cpp code:</b>
+
+                                <br><b>Enter Cpp code:</b>
                                 <?php 
                                 echo "<textarea style=\"width: 850px;height: 200px;\" name=\"code\" class=\"form-control mb-2\">".$_SESSION['codevalue']."</textarea>";
                                 ?>
 
-                                <b>Input:</b>
+                                <br><b>Input:</b>
                                 <?php 
                                 echo "<textarea style=\"width: 850px;height: 100px;\" name=\"input\" class=\"form-control mb-2\">". $_SESSION['inputvalue']."</textarea>";
                                 ?>
 
-                                <b>Time limit in seconds:</b>
+                                <br><b>Time limit in seconds:</b>
                                 <?php 
                                 echo "<textarea style=\"width: 850px;height: 50px;\" name=\"limit\" class=\"form-control mb-2\">".$_SESSION['limitvalue']."</textarea>";
                                 ?>
-                                <button class="btn btn-success" name="btn-send"> Submit </button>
+                                <br> <br><button class="btn btn-success" name="btn-send"> Submit </button>
                             </form>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                    <b>Output:</b>
-                    <?php
-                    echo "<textarea class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">".$_SESSION['outputvalue']."</textarea><br><br>";
+                        
+                    
+                    
+                        <br><b>Output:</b>
+                     <?php
+
+                    echo "<textarea style=\"width: 850px;height: 200px;\" class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">".$_SESSION['outputvalue']."</textarea><br><br>";
                     ?>
                 
               
             </div>
+        </div>
+
 
 
         

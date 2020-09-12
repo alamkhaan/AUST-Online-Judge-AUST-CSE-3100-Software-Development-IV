@@ -2,7 +2,7 @@
 
    $email = $_POST['email'];
    $password = $_POST['password'];
-		$conn = mysqli_connect("localhost","root","","austoj");
+	$conn = mysqli_connect("localhost","root","","austoj");
 		if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
          }
