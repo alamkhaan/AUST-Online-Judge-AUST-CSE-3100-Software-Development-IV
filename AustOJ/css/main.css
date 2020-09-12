@@ -1,0 +1,229 @@
+.Row{
+	background: white;
+	margin: 1%;
+}
+.pic1{
+	
+	height: 500px;
+	width: 100%;
+	margin-top: 20px;
+	
+}
+
+.regi
+{
+
+	margin-left: 2%;
+	margin-top: 15px;
+	
+}
+
+.login
+{
+
+	margin-top: 15px;
+	margin-left: 10%;
+
+	
+}
+
+.footer-content
+{
+	margin-top: 15px;
+	margin-left: 40%;
+}
+.footer-text
+{
+	
+	margin-left: 5%;
+}
+
+
+.logo
+{
+	width : 40%;
+	height: auto;
+	
+}
+
+.login-title{
+	color:#009933;
+	
+	
+}
+h5{
+	color: white;
+	
+}
+p{
+	color: black;
+	font-size: 16px;
+}
+.icon{
+	margin-top: 25px;
+}
+#f1{
+	background: YellowGreen;
+}
+#f2{
+	background: DarkCyan;
+}
+#f3{
+	background: DimGray;
+}
+
+
+.thirdRow{
+	margin-top: 40px;
+}
+.img-circle{
+	border-radius: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+        margin-bottom: 15px;
+}
+.text_pic{
+	color: LightGrey;
+	text-align: justify;
+	font-size: 14px;
+	
+	
+}
+.fourthRow{
+	background:#F8F8FF;
+	margin-top:60px;
+}
+.fifthRow{
+	background-image: url("Background.jpg");
+	background-repeat:no-repeat;
+	background-size: 100% 100%;
+	min-height:250px;
+}
+.sixthRow{
+	background: black;
+}
+
+.homebutton{
+	background-color:White;
+	box-shadow:White;
+	
+}
+
+
+
+.mybutton
+{
+	background-color:White;
+	box-shadow:White;
+	color : #0000ff;
+
+}
+.mybutton:hover{
+	background-color:LightGray;
+	box-shadow:Gray;
+	border-color:Gray;
+	color : #0000ff;
+}
+.homebutton:hover{
+	background-color:LightGray;
+	box-shadow:Gray;
+	border-color:Gray;
+}
+
+.btn2
+{
+	margin : 1%;
+}
+.btn3
+{
+	margin : 2%;
+}
+
+
+.space
+{
+	height: 50px;
+}
+
+.formdesign{
+	margin-top: 50px;
+	
+	background-color:white;
+
+}
+
+.signuppic-design
+{
+	
+	margin-top: 50px;
+	width: 100%;
+	background-color:#f2f2f2;
+
+}
+
+.loginpic-design
+{
+	
+	margin-top: 50px;
+	background-color:#f2f2f2;
+	width : 100%;
+	height: 370px;
+
+}
+
+.table-striped{
+	margin-top: 50px;
+}
+
+.loginbutton{
+	background-color:#00004d;
+	box-shadow:#009933;	
+	color: white;
+	
+}
+
+.loginbutton:hover{
+	background-color:#0000e6;
+	box-shadow:#1aff66;
+	
+}
+
+.signup-content
+{
+	
+	background-color:#f2f2f2;
+}
+
+.signup-title
+{
+	margin-left: 20%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.login-form-row
+{
+	margin-bottom: 20px;
+}
+.signup-form-submit
+{
+	margin-left: 35%;
+	margin-top: 40px;
+}
+.radiobutton
+{
+	margin-left: 5%;
+}
+
+.already-account
+{
+	margin-top: 35px;
+	margin-left: 50%;
+}
+
+.forgot-password
+{
+	margin-top: 25px;
+	margin-left: 30%;
+}
