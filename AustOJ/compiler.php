@@ -38,67 +38,69 @@
                             <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
                         </div>
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Problems</b></button></a>
+                            <a href="problems.php"><button type="button" class="btn homebutton"><b>Problems</b></button></a>
                         </div>
                         <div class = "col-1.5">
                             <a href="compiler.php"><button type="button" class="btn mybutton"><b>Compiler</b></button></a>
                         </div>
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Submissions</b></button></a>
+                            <a href="submissions.php"><button type="button" class="btn homebutton"><b>Submissions</b></button></a>
                         </div>
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
+                            <a href="contactus.php"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
                         </div>
                         
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
+                            <a href="aboutus.php"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
                         </div>
                     
                 </div>
             </div>
         <div class = "row space"></div>
-        <div class="container">
-        
-            <div class="row">
-                <div class = "col-3"></div>
-                        <div class = "col-6">
+        <div class="container ">
+            <div class = "compile-form">
+                <div class = "row space"></div>
+                <div class="col-12 row">
+                
+                    <div class = "compiler-header">
                         <h3> <b>Compile Your Own Code </b></h3>
                     </div>
 
                             
                             
-            </div>
+            
                         
-                            <form method="post" action="process.php">
+                    <form method="post" action="process.php">
 
-                                <br><b>Enter Cpp code:</b>
+                                
+
+                                <br><b>Enter Cpp code:</b><br>
                                 <?php 
-                                echo "<textarea style=\"width: 850px;height: 200px;\" name=\"code\" class=\"form-control mb-2\">".$_SESSION['codevalue']."</textarea>";
+                                echo "<textarea style=\"width: 100%;height: 400px;\" name=\"code\" class=\"form-control mb-2\">".$_SESSION['codevalue']."</textarea>";
                                 ?>
 
-                                <br><b>Input:</b>
+                                <br><b>Input:</b><br>
                                 <?php 
-                                echo "<textarea style=\"width: 850px;height: 100px;\" name=\"input\" class=\"form-control mb-2\">". $_SESSION['inputvalue']."</textarea>";
+                                echo "<textarea style=\"width: 100%;height: 300px;\" name=\"input\" class=\"form-control mb-2\">". $_SESSION['inputvalue']."</textarea>";
                                 ?>
 
-                                <br><b>Time limit in seconds:</b>
-                                <?php 
-                                echo "<textarea style=\"width: 850px;height: 50px;\" name=\"limit\" class=\"form-control mb-2\">".$_SESSION['limitvalue']."</textarea>";
-                                ?>
-                                <br> <br><button class="btn btn-success" name="btn-send"> Submit </button>
-                            </form>
+                                <br> <br><button class="btn loginbutton" name="btn-send"> Submit </button>
+
+                                <br><br><b>Output:</b>
+                         <?php
+
+                        echo "<textarea style=\"width: 850px;height: 400px;\" class=\"form-control mb-2\" name=\"output\" >".$_SESSION['outputvalue']."</textarea><br><br>";
+                        ?>
+                    </form>
                         
                     
                     
-                        <br><b>Output:</b>
-                     <?php
-
-                    echo "<textarea style=\"width: 850px;height: 200px;\" class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">".$_SESSION['outputvalue']."</textarea><br><br>";
-                    ?>
+                        
                 
-              
+                </div>
             </div>
         </div>
+    </div>
 
 
 
