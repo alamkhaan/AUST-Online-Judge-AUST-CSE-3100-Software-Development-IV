@@ -82,6 +82,7 @@
 	if ($conn->query($sql) === TRUE) 
 	{
 	  header("location:login.php?successful");
+	  exit();
 	} 
 	else 
 	{
