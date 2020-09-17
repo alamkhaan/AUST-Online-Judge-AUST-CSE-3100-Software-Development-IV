@@ -1,10 +1,17 @@
 <?php 
 	session_start();
-	unset($_SESSION["username"]);
+	if(isset($_SESSION["username"]))
+	{
+		header("location:index.php");
+		exit();
+	}
+	
+                           
+	
 	include 'notloggedin.php';
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 	    
@@ -27,10 +34,10 @@
 							<a href="index.php"><button type="button" class="btn homebutton"><b>Home</b></button></a>
 						</div>
 						<div class = "col-1.5">
-							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
+							<a href="blogs.php"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
 						</div>
 						<div class = "col-1.5">
-							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Problems</b></button></a>
+							<a href="problems.php"><button type="button" class="btn homebutton"><b>Problems</b></button></a>
 						</div>
 						<div class = "col-1.5">
 							<a href="compiler.php"><button type="button" class="btn homebutton"><b>Compiler</b></button></a>
@@ -39,11 +46,11 @@
 							<a href="login.php?error=submissions"><button type="button" class="btn homebutton"><b>Submissions</b></button></a>
 						</div>
 						<div class = "col-1.5">
-							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
+							<a href="contactus.php"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
 						</div>
 						
 						<div class = "col-1.5">
-							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
+							<a href="aboutus.php"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
 						</div>
 					
 				</div>

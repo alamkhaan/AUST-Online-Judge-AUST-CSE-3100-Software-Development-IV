@@ -9,7 +9,7 @@ function kill($pid)
 
 function removeFiles() 
 {
-  exit();
+  
   global $cwd;
   if (file_exists($cwd.'/error-output.txt')) 
   {
@@ -53,7 +53,7 @@ if(isset($_POST['btn-send']))
 {
   $_SESSION['codevalue'] = $_POST['code'];
   $_SESSION['inputvalue'] = $_POST['input'];
-  $_SESSION['limitvalue']  =$_POST['limit'];
+ 
 
   if(trim($_SESSION['codevalue'])=="")
   {
@@ -72,8 +72,7 @@ if(isset($_POST['btn-send']))
   file_put_contents($cwd.'input.txt', $_POST['input']);
   chmod($cwd.'input.txt', 0777);
   // Time limit for the current program to execute
-  $time_limit = min((int)$_POST['limit'], 10);
-  $time_limit = max($time_limit,1);
+  $time_limit = 10;
   // Environmental variable values to set for execution
   $env = array();
   // Start time of the script
@@ -114,23 +113,19 @@ if(isset($_POST['btn-send']))
   );
 
   chmod($cwd.'myfile.out', 0777);
-  // Start the Counter
-  //$time_start = microtime_float();
+  
   // Start the program execution
   $process = proc_open("{$cwd}/myfile.out", $descriptorspec, $pipes, $cwd, NULL,$env);
 
-  // Time to sleep, for the program to complete
-  //$time_limit+= 3.0;
+  
   $time_start = microtime_float();
-  //$time_limit= 2.0*1.0;
-  $time_end = microtime_float();
-  $time = $time_end - $time_start;
+  
+  
 
-  //echo "Did nothing in $time seconds\n";
-  // Now awake up to see if the execution is complete
-  $cnt= 0 ;
+  
   while(1)
   {
+      usleep(100);
       $status = proc_get_status($process);
       
       if($status['running'])
@@ -152,7 +147,7 @@ if(isset($_POST['btn-send']))
       {
           $time_end = microtime_float();
           $time = $time_end - $time_start;
-          //$_SESSION['outputvalue'] = $time;
+          
           break;
       }
   }

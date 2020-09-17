@@ -28,7 +28,7 @@
 						<a  href="https://codeforces.com"> <?php echo $_SESSION['username'] ?> </a>
 					</div>
 					<div class =  "regi">
-						<a  href="login.php" >Log Out</a>
+						<a  href="login2.php" >Log Out</a>
 					</div>
 				</div>
 			</div>

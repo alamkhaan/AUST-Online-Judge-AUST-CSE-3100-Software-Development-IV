@@ -32,20 +32,20 @@
 							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
 						</div>
 						<div class = "col-1.5">
-							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Problems</b></button></a>
+							<a href="problems.php"><button type="button" class="btn homebutton"><b>Problems</b></button></a>
 						</div>
 						<div class = "col-1.5">
 							<a href="compiler.php"><button type="button" class="btn homebutton"><b>Compiler</b></button></a>
 						</div>
 						<div class = "col-1.5">
-							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Submissions</b></button></a>
+							<a href="submissions.php"><button type="button" class="btn homebutton"><b>Submissions</b></button></a>
 						</div>
 						<div class = "col-1.5">
-							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
+							<a href="contactus.php"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
 						</div>
 						
 						<div class = "col-1.5">
-							<a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
+							<a href="aboutus.php"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
 						</div>
 					
 				</div>
