@@ -126,6 +126,12 @@ p{
 	
 }
 
+.compiler-header
+{
+
+	padding-left: 27%;
+}
+
 
 
 .mybutton
@@ -147,6 +153,19 @@ p{
 	border-color:Gray;
 }
 
+.compile-form
+{
+	background-color:#adad85;
+	padding-left: 12%;
+	border-radius: 20px;
+
+}
+
+.compile-form2
+{
+	width: 80%;
+}
+
 .btn2
 {
 	margin : 1%;
@@ -164,8 +183,9 @@ p{
 
 .formdesign{
 	margin-top: 50px;
-	
+	border-radius: 20px;
 	background-color:white;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 
 }
 
@@ -175,6 +195,8 @@ p{
 	margin-top: 50px;
 	width: 100%;
 	background-color:#f2f2f2;
+	border-radius: 20px;
+
 
 }
 
@@ -208,7 +230,9 @@ p{
 .signup-content
 {
 	
-	background-color:#f2f2f2;
+	background-color:#d9d9d9;
+	border-radius: 20px;
+
 }
 
 .signup-title
@@ -227,6 +251,12 @@ p{
 	margin-left: 35%;
 	margin-top: 40px;
 }
+
+.add-problem-button
+{
+	margin-left: 45%;
+	margin-top: 40px;
+}
 .radiobutton
 {
 	margin-left: 5%;
@@ -243,3 +273,71 @@ p{
 	margin-top: 25px;
 	margin-left: 30%;
 }
+
+.new-problem-design
+{
+	background-color:#e6e6e6;;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	border-radius:20px;
+}
+
+.new-problem-heading
+{
+	color: black;
+	text-shadow: gray;
+	text-align: center;
+}
+
+.textarea1
+{
+	width: 100%;
+	height :37px;
+	background-color:white;
+}
+
+.textarea2
+{
+	width: 100%;
+	height :150px;
+	background-color:white;
+}
+
+.textarea3
+{
+	width: 100%;
+	height :350px;
+	background-color:white;
+}
+
+.textarea4
+{
+	width: 100%;
+	height :350px;
+	background-color:#f2f2f2;
+}
+
+.problem-header
+{
+	text-align: center;
+	margin-left: 40%;
+}
+.statement
+{
+	white-space:pre-wrap;
+	
+}
+
+.input-design
+{
+	white-space:pre-wrap;
+	
+
+}
+
+
+.problem-design
+{
+	
+	padding-left: 2%;
+}
+
