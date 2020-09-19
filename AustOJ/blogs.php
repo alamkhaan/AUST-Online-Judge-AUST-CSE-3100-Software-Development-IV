@@ -99,7 +99,7 @@
 						<div class = \"row\">
 		                    <div class = \"blog-view-design\">
 		                        <h2><b>".$heading."</b></h2>
-		                        <h5>-<a  href=\"profile.php?id=.".$userid."\">".$name."</a></h5>
+		                        <h5>-<a href=\"profile.php?id=".$userid."\">".$name."</a></h5>
 		                        <pre class = \"statement\">".$message."</pre>
 		                        <a  href=\"blog-view.php?id=".$blogid."\"><h6>"."View Comments"."</h6></a>
 		                    </div>

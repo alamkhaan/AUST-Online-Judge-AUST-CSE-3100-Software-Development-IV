@@ -131,7 +131,7 @@
                 <div class="row">
                 <div class="col-md-8">
                     <div class = "row">
-                        <img src = "<?php echo $pic ?>">
+                        <img class="pic9" src = "<?php echo $pic ?>">
                      </div>
                      <div class="row space"></div>
 
