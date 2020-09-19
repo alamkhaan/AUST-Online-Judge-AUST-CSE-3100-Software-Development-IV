@@ -1,6 +1,6 @@
 <?php
 	 $name = $_POST['username'];
-	 $password1 = $_POST['password'];
+	 $password1 = md5($_POST['password']);
 	 $gender = $_POST['gender'];
 	 $email = $_POST['email'];
 	 $phone = $_POST['contactNo'];
@@ -34,12 +34,19 @@
  		exit();
 	}
 
-
+	if($gender=="Female")
+	{
+		$pic = "images/default-avatar_female.png";
+	}
+	else
+	{
+		$pic  = "images/male.jpg";
+	}
 
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	$dbname = "austoj";
+	$dbname = "170204084";
 
 	
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -76,8 +83,8 @@
                }
          	}
 
-	$sql = "INSERT INTO user (username,email,password,gender,contactno,birthdate)
-	VALUES ('$name','$email','$password1','$gender','$phone','$birthdate')";
+	$sql = "INSERT INTO user (username,email,password,gender,contactno,birthdate,picture)
+	VALUES ('$name','$email','$password1','$gender','$phone','$birthdate','$pic')";
 
 	if ($conn->query($sql) === TRUE) 
 	{

@@ -13,12 +13,14 @@
 		$sampleoutput = $_POST['sampleoutput'];
 		$hiddeninput = $_POST['hiddeninput'];
 		$hiddenoutput = $_POST['hiddenoutput'];
+		$name = $_SESSION['username'];
+		$authorid = $_SESSION['id'];
 
 
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-		$dbname = "austoj";
+		$dbname = "170204084";
 
 		
 		$conn = new mysqli($servername, $username, $password, $dbname);
@@ -27,8 +29,8 @@
 		  die("Connection failed: " . $conn->connect_error);
 		}
 
-		$sql = "INSERT INTO problemset (name,difficulty,totalsolved,timelimit,statement,inputformat,constraints,outputformat,sampleinput,sampleoutput,hiddeninput,hiddenoutput,author)
-		VALUES ('$title','$difficulty',0,$timelimit,'$statement','$inputformat',$constraints,'$outputformat','$sampleinput',$sampleoutput,'$hiddeninput','$hiddenoutput','$_SESSION['username']'')";
+		$sql = "INSERT INTO problemset (name,difficulty,totalsolved,timelimit,statement,inputformat,constraints,outputformat,sampleinput,sampleoutput,hiddeninput,hiddenoutput,author,authorid)
+		VALUES ('$title','$difficulty',0,$timelimit,'$statement','$inputformat','$constraints','$outputformat','$sampleinput','$sampleoutput','$hiddeninput','$hiddenoutput','$name',$authorid)";
 
 		if ($conn->query($sql) == TRUE) 
 		{

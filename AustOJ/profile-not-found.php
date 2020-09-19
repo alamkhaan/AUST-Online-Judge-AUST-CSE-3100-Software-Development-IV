@@ -1,6 +1,4 @@
-
 <?php 
-
 	session_start();
 	if(isset($_SESSION['username']))
 		include 'loggedin.php';
@@ -8,23 +6,7 @@
 	include 'notloggedin.php';
 
 
-	$conn = new mysqli("localhost", "root","", "170204084");
-    
-    if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT * FROM project_picture where name= 'header'";
-    $result= $conn->query($sql);
-
-    while($row = $result-> fetch_assoc())
-    {
-
-        $pic= $row["path"]; 
-            
-    }
-
-    $conn->close(); 
+	
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +29,7 @@
 				<div class="row bar">	
 					
 						<div class = "col-1.5">
-							<a href="index.php"><button type="button" class="btn mybutton"><b>Home</b></button></a>
+							<a href="index.php"><button type="button" class="btn homebutton"><b>Home</b></button></a>
 						</div>
 						<div class = "col-1.5">
 							<a href="blogs.php"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
@@ -70,24 +52,18 @@
 						</div>
 					
 				</div>
-			
-				<div class="picRow">			
-					<img src="<?php echo $pic?> " class="pic1">
-				</div>
+				<div class="row space"></div>
+				<?php 
+					$Msg = "Profile Not Found";
+                    echo '<div class="alert alert-danger">'.$Msg.'</div>';
+                ?>
+                <div class="row space"></div>
 			</div>
-			
 		</div>
-		
-
-
-
-
-		
 	</body>
 </html>
 
-
 <?php 
-	
 	include 'footer.php';
+
 ?>

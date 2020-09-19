@@ -9,6 +9,24 @@
                            
 	
 	include 'notloggedin.php';
+
+	$conn = new mysqli("localhost", "root","", "170204084");
+    
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM project_picture where name= 'login'";
+    $result= $conn->query($sql);
+
+    while($row = $result-> fetch_assoc())
+    {
+
+        $pic= $row["path"]; 
+            
+    }
+
+    $conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -28,28 +46,28 @@
 	<body>
 		<div class="Row">			
 			<div class="container">
-				<div class="row">	
+				<div class="row bar">	
 					
-						<div class = "col-1.5">
+						<div class = "col-md-1.5">
 							<a href="index.php"><button type="button" class="btn homebutton"><b>Home</b></button></a>
 						</div>
-						<div class = "col-1.5">
+						<div class = "col-md-1.5">
 							<a href="blogs.php"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
 						</div>
-						<div class = "col-1.5">
+						<div class = "col-md-1.5">
 							<a href="problems.php"><button type="button" class="btn homebutton"><b>Problems</b></button></a>
 						</div>
-						<div class = "col-1.5">
+						<div class = "col-md-1.5">
 							<a href="compiler.php"><button type="button" class="btn homebutton"><b>Compiler</b></button></a>
 						</div>
-						<div class = "col-1.5">
+						<div class = "col-md-1.5">
 							<a href="login.php?error=submissions"><button type="button" class="btn homebutton"><b>Submissions</b></button></a>
 						</div>
-						<div class = "col-1.5">
+						<div class = "col-md-1.5">
 							<a href="contactus.php"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
 						</div>
 						
-						<div class = "col-1.5">
+						<div class = "col-md-1.5">
 							<a href="aboutus.php"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
 						</div>
 					
@@ -80,27 +98,27 @@
                  </div>
                 <div class = "container signup-content">
 				<div class = "row">
-				<div class="col-1"> </div>
+				<div class="col-md-1"> </div>
 
-				<div class="col-4">
+				<div class="col-md-4">
 
-                	<img src="images/signin-image.jpg" class = "loginpic-design">
-            	</div><div class="col-1"> </div>
+                	<img src="<?php echo $pic ?>" class = "loginpic-design">
+            	</div><div class="col-md-1"> </div>
 
-            	<div class="col-5 formdesign">
+            	<div class="col-md-5 formdesign">
                         <form action="checklogin.php" method="POST">
 
                         <h4 class = "signup-title"><b>Login in AUST OJ</b></h4><br>
 
 
                         <div class = "login-form-row">
-                            <label  class="col-4">Email:</label>
-                            <input class="col-6" type="email" name="email"  required="" placeholder="Enter Your Email"><br>
+                            <label  class="col-md-4">Email:</label>
+                            <input class="col-md-6" type="email" name="email"  required="" placeholder="Enter Your Email"><br>
                         </div>
 
                         <div class = "login-form-row">
-                            <label  class="col-4">Password:</label>
-                            <input class="col-6" type="Password" name="password"  required="" placeholder="Enter Your Password"><br>
+                            <label  class="col-md-4">Password:</label>
+                            <input class="col-md-6" type="Password" name="password"  required="" placeholder="Enter Your Password"><br>
                         </div>
 
                         <div class = "signup-form-submit">

@@ -19,7 +19,7 @@
 		$servername = "localhost";
 		$username = "root";
 		$password = "";
-		$dbname = "austoj";
+		$dbname = "170204084";
 
 		
 		$conn = new mysqli($servername, $username, $password, $dbname);
@@ -37,8 +37,8 @@
 		if ($conn->query($sql) == TRUE) 
 		{
 			$h =  "location:edit-problem.php?id=".$id."&successful";
-		  header($h);
-		  exit();
+			  header($h);
+			  exit();
 		} 
 		else 
 		{

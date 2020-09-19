@@ -9,7 +9,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "austoj";
+    $dbname = "170204084";
     if(isset($_GET['id']))
     {
         $id  = $_GET['id'];
@@ -77,13 +77,13 @@
     <div class="Row"> 
 
         <div class="container">
-                <div class="row">   
+                <div class="row bar">   
                     
                         <div class = "col-1.5">
                             <a href="index.php"><button type="button" class="btn homebutton"><b>Home</b></button></a>
                         </div>
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
+                            <a href="blogs.php"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
                         </div>
                         <div class = "col-1.5">
                             <a href="problems.php"><button type="button" class="btn homebutton"><b>Problems</b></button></a>
@@ -92,14 +92,14 @@
                             <a href="compiler.php"><button type="button" class="btn homebutton"><b>Compiler</b></button></a>
                         </div>
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Submissions</b></button></a>
+                            <a href="submissions.php"><button type="button" class="btn homebutton"><b>Submissions</b></button></a>
                         </div>
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
+                            <a href="contactus.php"><button type="button" class="btn homebutton"><b>Contact Us</b></button></a>
                         </div>
                         
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
+                            <a href="aboutus.php"><button type="button" class="btn homebutton"><b>About Us</b></button></a>
                         </div>
                     
                 </div>
@@ -144,7 +144,7 @@
 
                 <div class ="row space"></div>
                 <div class = "row">
-                    <div class = "problem-design">
+                    <div class = "col-md-12 problem-design">
                         <h6><b>Input Format:</b></h6>
                         <pre class = "statement"><?php echo $inputformat ?> </pre>
                     </div>
@@ -186,13 +186,13 @@
                <div class = "row space"></div>
 
                  
-                <form action="kjfhkdjs.php">
+                <form action="problem-submit.php?id=<?php echo $id?>" method="post">
                         <div>
                             <h6><b>Enter cpp code:</b></h6>
                             <textarea class= "textarea4" name ="code"></textarea>
                         </div>
                         <div class = "row space"></div>
-                        <button type="submit" class="btn loginbutton " value="Submit" name="">Submit</button>
+                        <button type="submit" class="btn loginbutton " value="Submit" name="submit">Submit</button>
 
                 </form>
                

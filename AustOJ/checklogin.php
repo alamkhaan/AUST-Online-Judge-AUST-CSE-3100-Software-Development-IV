@@ -2,7 +2,7 @@
 
    $email = $_POST['email'];
    $password = $_POST['password'];
-	$conn = mysqli_connect("localhost","root","","austoj");
+	$conn = mysqli_connect("localhost","root","","170204084");
 		if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
          }
@@ -15,13 +15,14 @@
          	while($row = $result-> fetch_assoc())
             {
 
-               if($row["email"]==$email && $row["password"]==$password)
+               if($row["email"]==$email && $row["password"]==md5($password))
                {
                   
                   
                   //header("location:login.php?successful");
                   session_start();
                   $_SESSION['username'] = $row["username"];
+                  $_SESSION['id'] = $row["userid"];
                   $conn->close();
                   header("location:index.php");
                   session_end();
@@ -33,6 +34,6 @@
 
       $conn->close(); 
          
-      header("location:register.php?error=notmatched");
+      header("location:login.php?notmatched");
       exit();
 ?>

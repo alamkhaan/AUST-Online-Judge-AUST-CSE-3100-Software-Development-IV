@@ -1,3 +1,23 @@
+<?php
+	$conn = new mysqli("localhost", "root","", "170204084");
+    
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT * FROM project_picture where name= 'logo'";
+    $result= $conn->query($sql);
+
+    while($row = $result-> fetch_assoc())
+    {
+
+        $pic= $row["path"]; 
+            
+    }
+
+    $conn->close();
+?>
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -17,7 +37,7 @@
 			<div class="container">
 				<div class="row">		
 					<div class="col-8">
-						<img src="images/logo.png" class = "logo">
+						<img src="<?php echo $pic ?>" class = "logo">
 					</div>
 					
 					<div class = "login" > 

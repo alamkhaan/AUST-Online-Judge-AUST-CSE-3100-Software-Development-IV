@@ -24,13 +24,13 @@
     <div class="Row"> 
 
         <div class="container">
-                <div class="row">   
+                <div class="row bar">   
                     
                         <div class = "col-1.5">
                             <a href="index.php"><button type="button" class="btn homebutton"><b>Home</b></button></a>
                         </div>
                         <div class = "col-1.5">
-                            <a href="https://codeforces.com"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
+                            <a href="blogs.php"><button type="button" class="btn homebutton"><b>Blogs</b></button></a>
                         </div>
                         <div class = "col-1.5">
                             <a href="problems.php"><button type="button" class="btn mybutton"><b>Problems</b></button></a>
@@ -93,7 +93,7 @@
 		</tr>
 		</thead>
 		<?php
-		$conn = mysqli_connect("localhost","root","","austoj");
+		$conn = mysqli_connect("localhost","root","","170204084");
 		if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
          }
@@ -104,7 +104,7 @@
 
          if($result-> num_rows >0){
          	while($row = $result-> fetch_assoc()){
-         		echo "<tr><td>".$row["id"]."</td><td><a  href=\"problem-view.php?id=".$row["id"]."\">".$row["name"]."</a></td> <td>".$row["difficulty"]."</td><td>".$row["totalsolved"]."</td><td>".$row["author"]."</td></tr>";
+         		echo "<tr><td>".$row["id"]."</td><td><a  href=\"problem-view.php?id=".$row["id"]."\">".$row["name"]."</a></td> <td>".$row["difficulty"]."</td><td>".$row["totalsolved"]."</td><td><a  href=\"profile.php?id=".$row["authorid"]."\">".$row["author"]."</a></td></tr>";
          	}
   
          }
@@ -125,3 +125,8 @@
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<?php 
+    
+    include 'footer.php';
+?>

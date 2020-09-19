@@ -14,16 +14,17 @@
 
 	<body>
 		<div class='Row'>		
-			<div class="container">
+			<div class="container ">
 				<div class="row space">	</div>
-				<div class="row">		
-					<div class = "footer-content col-3">
+				<div class="row footer-image">		
+					
+					<div class = "footer-content col-md-3">
 						<div class = "row">
 							<div class ="footer-text">
 								<a href="index.php">Aust OJ </a>
 							</div>
 							<div class ="footer-text">
-								<label> (c) Copyright 2020</label>
+								<label> &copy Copyright 2020</label>
 							</div>
 							
 						</div>
@@ -48,9 +49,10 @@
 						</div>
 						
 
+					
 					</div>
 				</div>
-				<div class="row space">	</div>
+				
 			</div>
 		</div>
 	</body>
