@@ -1,4 +1,12 @@
 <?php
+
+
+    session_start();
+	if(isset($_SESSION["username"]))
+	{
+		header("location:index.php");
+		exit();
+	}
     include 'notloggedin.php';
 
     $conn = new mysqli("localhost", "root","", "170204084");
