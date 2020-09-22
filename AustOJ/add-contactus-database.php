@@ -2,7 +2,7 @@
 	if(isset($_POST['submit']))
 	{
 		session_start();
-		$name = trim($_POST['username ']);
+		$name = trim($_POST['username']);
 		$email= $_POST['email'];
 		$contactNo = $_POST['contactNo'];
 		$problems = $_POST['problems'];
